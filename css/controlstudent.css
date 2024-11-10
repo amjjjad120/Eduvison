@@ -1,0 +1,238 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background-color: #f5f5f5f5;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: black;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+/* Logo */
+.logo {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo h1 {
+    color: black;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: absolute;
+    top: 20px;
+    left: auto;
+}
+
+.logo-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.nav-item {
+    margin: 10px 7px 10px 0px;
+    padding: 15px 25px;
+    cursor: pointer;
+    background-color: #F8F7F7;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    color:#707070 ;
+   
+}
+.nav-item:active,
+.nav-item:visited {
+    margin: 10px 7px 10px 0px;
+    padding: 15px 25px;
+    cursor: pointer;
+    background-color: #F8F7F7;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    color:#707070 ;
+}
+
+.nav-item:hover {
+    background-color: #d3d3d3;
+    text-decoration: none;
+}
+
+.icon-placeholder {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255,255,255,0.3);
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 280px;
+    padding: 20px;
+    transition: margin 0.3s ease;
+
+
+                flex: 1;
+                min-height: 18vh;
+                background-color: #f9f9f9;
+            }
+
+
+.header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-text {
+    color: black;
+    font-size: 24px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+ 
+}
+
+.search-bar {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.1);
+    top: 20px;
+    position: fixed;
+    align-items: end;
+}
+
+.form-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-top: 60px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .form-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 90;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.img {
+    width: 70px;
+    height: 70x;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    margin-right: 10px;
+ 
+    position: absolute;
+    left: 1.1px;
+    top: 10px;
+}
+
+.hh {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 30px;
+
+}
+
+.btn-secondary {
+    color: #000000;
+    background-color: #eaeaea;
+    border-color: #eaeaea;
+width: 97%;
+}
+.btn-secondary:hover {
+    color: #000000;
+    background-color: #eaeaea;
+    border-color: #eaeaea;
+}
